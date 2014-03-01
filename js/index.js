@@ -55,7 +55,7 @@ var app = {
     imageSearch: function(){
       alert('imageSearch');
       $.ajax({
-        url: 'http://www.google.com/',
+        url: 'http://google.com/',
         type: 'GET',
         success: function(response){
           alert((response || {}).status);
