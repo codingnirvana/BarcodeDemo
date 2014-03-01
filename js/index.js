@@ -17,9 +17,33 @@
  * under the License.
  */
 var app = {
+
+    HOST_URL : "http://41760a89.ngrok.com/products",
+    type: 'barcode',
+
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+    },
+
+    initializeButtons: function(type){
+      switch(type){
+        case 'barcode':
+          $('.scan').parent().find('.ui-btn-text').html('Scan bar code');
+          $('input.ui-input-text.text-search').css('display','none');
+          $('.scan').off('click').on('click', this.scan);
+          break;
+        case 'image':
+          $('.scan').parent().find('.ui-btn-text').html('Scan image');
+          $('input.ui-input-text.text-search').css('display','none');
+          $('.scan').off('click').on('click', this.imageSearch);
+          break;
+        case 'text':
+          $('input.ui-input-text.text-search').css('display','block');
+          $('.scan').parent().find('.ui-btn-text').html('Search');
+          $('.scan').off('click').on('click', this.textSearch);
+          break;
+      }
     },
     // Bind Event Listeners
     //
@@ -94,12 +118,41 @@ var app = {
             "Format: " + result.format + "\n" +
             "Cancelled: " + result.cancelled);
 
+            $('.scan').parent().find('.ui-btn-text').html('scanning...')
+            $.ajax({
+              url: app.HOST_URL + "&q=" + '9788190453011',
+              dataType: "json",
+              success: function(response){
+                $('.scan').parent().find('.ui-btn-text').html('scan success.');
+                alert((response || {}).status);
+                $('.products h1').html(response.title);
+                $('.products-list').empty();
+                $(response.offers).each(function(){
+                  var el =  '<li>\
+                          <a href="' + this.storeUrl + '">\
+                            <img class="store-image" src="' + this.storeLogoUrl + '" />\
+                            <label class="store-name">' + this.storeName + '</label>\
+                            <label class="price">$' + this.price + '</label>\
+                          </a>\
+                        </li>'
+                  $('.products-list').append(el);
+                })
+                 $('.products-list').listview('refresh');
+              },
+              error: function(msg){
+                $('.scan').parent().find('.ui-btn-text').html('scan error.');
+                alert("Error in ajax:" + JSON.stringify(msg));
+              }
+            })
+
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
                 "format: " + result.format + "\n" +
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
+
+
             /*
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });

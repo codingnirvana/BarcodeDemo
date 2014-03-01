@@ -40,7 +40,7 @@
               $('a.link').on('click', function(){
                 $('.app-list').hide();
                 var el = $(event.target).is('a') ? $(event.target) : $(event.target).parents('a');
-                app.initialize(el.data('type'));
+                app.initializeButtons(el.data('type'));
                 $('.products').show();
               })
               $('.scan').on('click', function(){
@@ -57,7 +57,7 @@
         <div class="app" data-role="page" data-theme="b" id="app">
         <div data-role="content" data-theme="b">
           <div class="app-list">
-            <h1>Search products - $F5</h1>
+            <h1>Search products</h1>
             <ul data-role="listview">
               <li>
                 <a class="link" data-type="barcode" href="javascript:void(0);">
@@ -81,7 +81,7 @@
           <input type="text" class="text-search" placeholder="Search product" />
           <button class="scan">Scan bar code</button>
           <a class="home" href="javascript:void(0);" target="_self">Home</a>
-          <h1>Nike Air max shoe</h1>
+          <h1></h1>
           <div>
             <ul class="products-list" data-role="listview">
             </ul>
