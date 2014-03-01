@@ -33,14 +33,11 @@
               alert('mobile init');
               $.support.cors = true;
               $.mobile.allowCrossDomainPages = true;
-              $.mobile.ajaxEnabled = false;
             });
             $(function(){
               $(document).ready(function() {
-                alert("mobileinit1 - " + ($.support || {}).cors + "-" + ($.mobile || {}).allowCrossDomainPages);
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
-                $.mobile.ajaxEnabled = false;
                 app.initialize();
               });
 

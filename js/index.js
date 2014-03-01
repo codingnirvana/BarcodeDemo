@@ -61,7 +61,7 @@ var app = {
           alert((response || {}).status);
         },
         error: function(msg){
-          alert("Error:" + JSON.stringify(msg));
+          alert("Error in ajax:" + JSON.stringify(msg));
         }
       })
     },
