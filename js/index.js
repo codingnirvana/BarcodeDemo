@@ -26,8 +26,10 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function() {
-        document.getElementById('scan').addEventListener('click', this.scan, false);
-        document.getElementById('imageSearch').addEventListener('click', this.imageSearch, false);
+        //document.getElementById('scan').addEventListener('click', this.scan, false);
+        //document.getElementById('imageSearch').addEventListener('click', this.imageSearch, false);
+        $('#imageSearch').on('click', this.imageSearch);
+        $('#scan').on('click', this.scan);
     },
 
     // deviceready Event Handler
@@ -35,22 +37,23 @@ var app = {
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        //app.receivedEvent('deviceready');
     },
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        // var parentElement = document.getElementById(id);
+        // var listeningElement = parentElement.querySelector('.listening');
+        // var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        // listeningElement.setAttribute('style', 'display:none;');
+        // receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        // console.log('Received Event: ' + id);
     },
 
     imageSearch: function(){
+      alert('imageSearch');
       $.ajax({
         url: 'http://api.indix.com/api/beta/products/?query=nike&app_id=54213813&app_key=7f5198b4650d239a4bf43bfbeced29bb',
         type: 'GET',
@@ -64,7 +67,7 @@ var app = {
     },
 
     scan: function() {
-        console.log('scanning');
+        alert('scanning');
 
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
@@ -94,14 +97,14 @@ var app = {
     },
 
     encode: function() {
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+        // var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
-            alert("encode success: " + success);
-          }, function(fail) {
-            alert("encoding failed: " + fail);
-          }
-        );
+        // scanner.encode(scanner.Encode.TEXT_TYPE, "http://www.nhl.com", function(success) {
+        //     alert("encode success: " + success);
+        //   }, function(fail) {
+        //     alert("encoding failed: " + fail);
+        //   }
+        // );
 
     }
 

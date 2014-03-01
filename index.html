@@ -19,38 +19,37 @@
 -->
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
+        <title>Barcode Scanner Demo</title>
         <link rel="stylesheet" href="themes/mapptor.min.css" />
-        <link rel="stylesheet" href="themes/jquery.mobile.structure-1.2.0.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!-- <link rel="stylesheet" href="themes/jquery.mobile.structure-1.2.0.min.css" /> -->
         <script src="js/jquery-1.8.2.min.js"></script>
         <script src="js/jquery.mobile-1.2.0.min.js"></script>
-        <title>Barcode Scanner Demo</title>
-    </head>
-    <body>
-        <div class="app"  data-role="page" data-theme="b">
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-            <p id="info"></p>
-          <div data-role="content" data-theme="b">
-            <h1>Search products -$F5</h1>
-            <form>
-              <button  data-theme="b" class="ui-btn" id="scan">Search by Bar code</button>
-              <button  data-theme="b" class="ui-btn" id="imageSearch">Search by Image</button>
-              <button  data-theme="b" class="ui-btn" id="text">Text Search</button>
-            </form>
-          </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="barcodescanner.js"></script>
-        <script type="text/javascript" src="childbrowser.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+
+            $(function(){
+              $(document).ready(function() {
+                alert("mobileinit - " + ($.support || {}).cors + "-" + ($.mobile || {}).allowCrossDomainPages);
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
+                app.initialize();
+              });
+            })
         </script>
+    </head>
+    <body>
+      <div class="app" data-role="page" data-theme="b">
+        <div data-role="content" data-theme="b">
+          <h1>Search products -$F5</h1>
+          <form>
+            <button  data-theme="b" class="ui-btn" id="scan">Search by Bar code</button>
+            <button  data-theme="b" class="ui-btn" id="imageSearch">Search by Image</button>
+            <button  data-theme="b" class="ui-btn" id="text">Text Search</button>
+          </form>
+        </div>
+      </div>
     </body>
 </html>
