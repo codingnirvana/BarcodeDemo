@@ -23,7 +23,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Barcode Scanner Demo</title>
         <link rel="stylesheet" href="themes/mapptor.min.css" />
-        <!-- <link rel="stylesheet" href="themes/jquery.mobile.structure-1.2.0.min.css" /> -->
+        <link rel="stylesheet" href="themes/jquery.mobile.structure-1.2.0.min.css" />
         <script src="js/jquery-1.8.2.min.js"></script>
         <script src="js/jquery.mobile-1.2.0.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -44,11 +44,11 @@
       <div class="app" data-role="page" data-theme="b">
         <div data-role="content" data-theme="b">
           <h1>Search products -$F5</h1>
-          <form>
+          <div data-ajax="false">
             <button  data-theme="b" class="ui-btn" id="scan">Search by Bar code</button>
             <button  data-theme="b" class="ui-btn" id="imageSearch">Search by Image</button>
             <button  data-theme="b" class="ui-btn" id="text">Text Search</button>
-          </form>
+          </div>
         </div>
       </div>
     </body>
