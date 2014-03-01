@@ -13,7 +13,7 @@
         PhoneGap Team
     </author>
 
-    <access uri="http://api.indix.com/" subdomains="true" />
+    <access uri="https://localtunnel.me" subdomains="true" />
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
