@@ -55,8 +55,8 @@ var app = {
     imageSearch: function(){
       alert('imageSearch');
       $.ajax({
-        url: 'http://api.indix.com/api/beta/products/?query=nike&app_id=54213813&app_key=7f5198b4650d239a4bf43bfbeced29bb',
-        type: 'GET',
+        url: 'http://api.indix.com/api/beta/products/?storeId=311&pageNumber=97&app_id=108dc10a&app_key=f7058a975398b8e0c79633ff6d5aecbb',
+        dataType: "json",
         success: function(response){
           alert((response || {}).status);
         },
