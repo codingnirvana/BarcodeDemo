@@ -22,9 +22,8 @@ var app = {
     type: 'barcode',
 
     // Application Constructor
-    initialize: function() {
+    initialize: function(type) {
         this.bindEvents();
-        var type = this.getURLParameter('type');
         switch(type){
           case 'barcode':
             $('.scan').parent().find('.ui-btn-text').html('Scan bar code');

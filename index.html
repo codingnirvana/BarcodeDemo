@@ -34,34 +34,76 @@
               $(document).ready(function() {
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
-                //app.initialize();
               });
-
+              $('a.link').on('click', function(){
+                $('.app-list').hide();
+                var el = $(event.target).is('a') ? $(event.target) : $(event.target).parents('a');
+                app.initialize(el.data('type'));
+                $('.products').show();
+              })
+              $('a.home').on('click', function(){
+                $('.products').hide();
+                $('.app-list').show();
+              })
             })
         </script>
     </head>
     <body>
-      <div class="app" data-role="page" data-theme="b">
+      <div class="app" data-role="page" data-theme="b" id="app">
         <div data-role="content" data-theme="b">
-          <h1>Search products -$F5</h1>
-          <div>
+          <div class="app-list">
+            <h1>Search products - $F5</h1>
             <ul data-role="listview">
               <li>
-                <a href="products.html?type=barcode">
+                <a class="link" data-type="barcode" href="javascript:void(0);">
                   <h3>Barcode Search</h3>
                 </a>
               </li>
               <li>
-                <a href="products.html?type=image">
+                <a class="link"  data-type="image" href="javascript:void(0);">
                   <h3>Image Search</h3>
                 </a>
               </li>
               <li>
-                <a href="products.html?type=text">
+                <a class="link" data-type="text" href="javascript:void(0);">
                   <h3>Text Search</h3>
                 </a>
               </li>
             </ul>
+          </div>
+          <div class="products">
+            <input type="text" class="text-search" placeholder="Search product" />
+            <button class="scan">Scan bar code</button>
+            <a class="home" href="javascript:void(0);" target="_self">Home</a>
+            <h1>Nike Air max shoe</h1>
+            <div>
+              <ul class="products-list" data-role="listview">
+                <li>
+                  <a href="http://www.flipkart.com/nike-liteforce-mid-ankle-sneakers/p/itmds8skhxkrrwff?pid=SHODS8SJP8YWEFBG&srno=b_1&ref=43a6f335-0f1e-4d3c-88cc-c9e694b574f8">
+                    <img class="store-image" src="http://img6a.flixcart.com/www/prod/images/flipkart_india-b1a41241.png" />
+                    <label class="price">$45.50</label>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.flipkart.com/nike-liteforce-mid-ankle-sneakers/p/itmds8skhxkrrwff?pid=SHODS8SJP8YWEFBG&srno=b_1&ref=43a6f335-0f1e-4d3c-88cc-c9e694b574f8">
+                    <img class="store-image" src="http://img6a.flixcart.com/www/prod/images/flipkart_india-b1a41241.png" />
+                    <label class="price">$45.50</label>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.flipkart.com/nike-liteforce-mid-ankle-sneakers/p/itmds8skhxkrrwff?pid=SHODS8SJP8YWEFBG&srno=b_1&ref=43a6f335-0f1e-4d3c-88cc-c9e694b574f8">
+                    <img class="store-image" src="http://img6a.flixcart.com/www/prod/images/flipkart_india-b1a41241.png" />
+                    <label class="price">$45.50</label>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.flipkart.com/nike-liteforce-mid-ankle-sneakers/p/itmds8skhxkrrwff?pid=SHODS8SJP8YWEFBG&srno=b_1&ref=43a6f335-0f1e-4d3c-88cc-c9e694b574f8">
+                    <img class="store-image" src="http://img6a.flixcart.com/www/prod/images/flipkart_india-b1a41241.png" />
+                    <label class="price">$45.50</label>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

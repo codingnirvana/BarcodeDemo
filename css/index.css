@@ -42,7 +42,7 @@ button, input{
     margin: 20px auto;
 }
 
-.home{
+.home.ui-link{
   position: absolute;
   right: 10px;
   top: 50px;
@@ -62,6 +62,10 @@ input.ui-input-text{
   background: #fff;
 }
 
+.products{
+  display: none;
+}
+
 
 .products .ui-btn{
   padding: 10px 0;
@@ -75,6 +79,7 @@ input.ui-input-text{
 input.ui-input-text.text-search{
   display: none;
   width: 80%;
+  color: #555;
 }
 
 .products-list .ui-btn{
