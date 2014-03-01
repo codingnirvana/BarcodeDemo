@@ -33,9 +33,22 @@
             $(function(){
               //document.getElementById('scan').addEventListener('click', app.scan, false);
               app.initialize();
+              $(document).ready(function() {
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
+              });
               $('a.link').on('click', function(){
+                $('.app-list').hide();
+                var el = $(event.target).is('a') ? $(event.target) : $(event.target).parents('a');
+                app.initialize(el.data('type'));
+                $('.products').show();
+              })
+              $('.scan').on('click', function(){
                 app.scan();
-
+              })
+              $('a.home').on('click', function(){
+                $('.products').hide();
+                $('.app-list').show();
               })
             })
         </script>
@@ -61,6 +74,16 @@
                   <h3>Text Search</h3>
                 </a>
               </li>
+            </ul>
+          </div>
+        </div>
+        <div class="products">
+          <input type="text" class="text-search" placeholder="Search product" />
+          <button class="scan">Scan bar code</button>
+          <a class="home" href="javascript:void(0);" target="_self">Home</a>
+          <h1>Nike Air max shoe</h1>
+          <div>
+            <ul class="products-list" data-role="listview">
             </ul>
           </div>
         </div>

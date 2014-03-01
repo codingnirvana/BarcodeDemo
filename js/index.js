@@ -51,6 +51,35 @@ var app = {
         console.log('Received Event: ' + id);
     },
 
+    getURLParameter: function(sParam){
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++){
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam){
+          return sParameterName[1];
+        }
+      }
+    },
+
+    textSearch: function(){
+
+    },
+
+    imageSearch: function(){
+      $.ajax({
+        url: 'http://api.indix.com/api/beta/products/?query=nike&app_id=54213813&app_key=7f5198b4650d239a4bf43bfbeced29bb',
+        dataType: "json",
+        success: function(response){
+          alert((response || {}).status);
+        },
+        error: function(msg){
+          alert("Error in ajax:" + JSON.stringify(msg));
+        }
+      })
+    },
+
+
     scan: function() {
         console.log('scanning');
         alert('scanning');
