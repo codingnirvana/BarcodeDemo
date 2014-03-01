@@ -58,7 +58,7 @@ var app = {
 
         scanner.scan( function (result) { 
 
-            alert("Save  The Hacker " + "\n"
+            alert("Save  The Hacker " + "\n" +
             "We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
             "Format: " + result.format + "\n" + 
