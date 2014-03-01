@@ -120,7 +120,7 @@ var app = {
 
             $('.scan').parent().find('.ui-btn-text').html('scanning...')
             $.ajax({
-              url: app.HOST_URL + "&q=" + '9788190453011',
+              url: app.HOST_URL + "?q=" + '9788190453011',
               dataType: "json",
               success: function(response){
                 $('.scan').parent().find('.ui-btn-text').html('scan success.');
