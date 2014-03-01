@@ -1,56 +1,37 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="js/jquery.mobile-1.4.2.min.js"></script>
-        <link rel="stylesheet" href="themes/mapptor.min.css" />
-        <link rel="stylesheet" href="themes/jquery.mobile.structure-1.2.0.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <script src="js/jquery-1.8.2.min.js"></script>
-        <script src="js/jquery.mobile-1.2.0.min.js"></script>
-        <title>Barcode Scanner Demo</title>
-    </head>
-    <body>
-        <div class="app"  data-role="page" data-theme="b">
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-            <p id="info"></p>
-          <div data-role="content" data-theme="b">
-            <h1>Search products -$F5</h1>
-            <form>
-              <button  data-theme="b" class="ui-btn" id="scan">Search by Bar code</button>
-              <button  data-theme="b" class="ui-btn" id="image">Search by Image</button>
-              <button  data-theme="b" class="ui-btn" id="text">Text Search</button>
-            </form>
-          </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="barcodescanner.js"></script>
-        <script type="text/javascript" src="childbrowser.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mapptor</title>
+		<link rel="stylesheet" href="themes/mapptor.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.structure-1.2.0.min.css" />
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/jquery.mobile-1.2.0.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page" data-theme="b">
+			<div data-role="content" data-theme="b">
+			<br/>
+			<br/>
+			<br/>
+			<div align="center">
+				<img src="images/mapptor.png">
+			</div>
+			<br><br>
+			<form action="home.html">
+			<br>
+					<input type="text" name="username" placeholder="Username" data-theme="b" />
+					<br>
+					<input type="password" name="password" placeholder="Password" data-theme="b" />
+					<br>
+					<input type="submit" name="login" value="Login" data-theme="b">
+				</form>
+				<br><br><br><br>
+				<div align="center">
+				<a href="signup.html" data-theme="b">New User? Sign Up</a>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
