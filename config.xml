@@ -13,6 +13,8 @@
         PhoneGap Team
     </author>
 
+    <access uri="*" subdomains="true" />
+
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
     <feature name="http://api.phonegap.com/1.0/device" />
@@ -53,6 +55,6 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 
-    <access uri="*" subdomains="true" />
+
     <!-- content src="http://www.w3.org/2010/05/video/mediaevents.html" / -->
 </widget>
