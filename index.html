@@ -37,6 +37,11 @@
                 $.mobile.allowCrossDomainPages = true;
                 app.initialize();
               });
+              $(document).bind( "mobileinit", function() {
+                alert('mobile init');
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
+              });
             })
         </script>
     </head>
