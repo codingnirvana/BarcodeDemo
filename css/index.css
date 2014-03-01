@@ -24,17 +24,7 @@
 }
 
 body {
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
+    background-color:#fff
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:20px;
@@ -46,36 +36,88 @@ body {
 }
 
 /* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+
+button, input{
+    display:block;
+    margin: 20px auto;
 }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
+.home.ui-link{
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  color: #555;
 }
 
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
+input.ui-input-text{
+  background: #ddd;
+}
+
+.ui-li-divider{
+  background: white;
+  color: #555;
+  margin-top: 50px;
+}
+.ui-li-static{
+  background: #fff;
+}
+
+.products{
+  display: none;
+}
+
+
+.products .ui-btn{
+  padding: 10px 0;
+  width: 80%;
+}
+
+.products h1{
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+input.ui-input-text.text-search{
+  display: none;
+  width: 80%;
+  color: #555;
+}
+
+.products-list .ui-btn{
+  width: 100%;
+}
+
+.products-list .store-image{
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 15px;
+  box-shadow: 0 0 1px #000;
+  min-width: 115px;
+}
+
+.products-list .store-name{
+  font-size: 25px;
+  margin: 12px 50px;
+  text-transform: capitalize;
+  font-weight: normal;
+  float: left;
+}
+
+.products-list .price{
+  font-size: 40px;
+  font-weight: bold;
+  float: right;
+  margin-right: 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.products h1{
+    text-align:left;
+}
+
+#deviceready, .info{
+    display: none;
 }
 
 .event {
@@ -102,13 +144,13 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
