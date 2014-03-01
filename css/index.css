@@ -74,6 +74,7 @@ input.ui-input-text{
 
 .products h1{
   text-transform: capitalize;
+  font-weight: normal;
 }
 
 input.ui-input-text.text-search{
@@ -87,11 +88,19 @@ input.ui-input-text.text-search{
 }
 
 .products-list .store-image{
-  background: #005387;
   border: 1px solid #000;
-  padding: 10px;
+  padding: 5px;
   margin: 15px;
   box-shadow: 0 0 1px #000;
+  min-width: 115px;
+}
+
+.products-list .store-name{
+  font-size: 25px;
+  margin: 12px 50px;
+  text-transform: capitalize;
+  font-weight: normal;
+  float: left;
 }
 
 .products-list .price{
@@ -100,10 +109,11 @@ input.ui-input-text.text-search{
   float: right;
   margin-right: 20px;
   display: inline-block;
+  margin-top: 10px;
 }
 
-h1{
-    text-align:center;
+.products h1{
+    text-align:left;
 }
 
 #deviceready, .info{
