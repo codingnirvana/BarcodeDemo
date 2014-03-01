@@ -13,7 +13,7 @@
         PhoneGap Team
     </author>
 
-    <access uri="http://google.com" subdomains="true" />
+    <access uri="http://api.indix.com/" subdomains="true" />
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
