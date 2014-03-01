@@ -17,10 +17,44 @@
  * under the License.
  */
 var app = {
+
+    HOST_URL : "http://192.168.6.72:3000/products",
+    type: 'barcode',
+
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        var type = this.getURLParameter('type');
+        switch(type){
+          case 'barcode':
+            $('.scan').parent().find('.ui-btn-text').html('Scan bar code');
+            $('input.ui-input-text.text-search').css('display','none');
+            $('.scan').off('click').on('click', this.scan);
+            break;
+          case 'image':
+            $('.scan').parent().find('.ui-btn-text').html('Scan image');
+            $('input.ui-input-text.text-search').css('display','none');
+            $('.scan').off('click').on('click', this.imageSearch);
+            break;
+          case 'text':
+            $('input.ui-input-text.text-search').css('display','block');
+            $('.scan').parent().find('.ui-btn-text').html('Search');
+            $('.scan').off('click').on('click', this.textSearch);
+            break;
+        }
     },
+
+    getURLParameter: function(sParam){
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++){
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam){
+          return sParameterName[1];
+        }
+      }
+    },
+
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -28,32 +62,15 @@ var app = {
     bindEvents: function() {
         //document.getElementById('scan').addEventListener('click', this.scan, false);
         //document.getElementById('imageSearch').addEventListener('click', this.imageSearch, false);
-        $('#imageSearch').on('click', this.imageSearch);
-        $('#scan').on('click', this.scan);
+        $('#imageSearch').off('click').on('click', this.imageSearch);
+
     },
 
-    // deviceready Event Handler
-    //
-    // The scope of `this` is the event. In order to call the `receivedEvent`
-    // function, we must explicity call `app.receivedEvent(...);`
-    onDeviceReady: function() {
-        //app.receivedEvent('deviceready');
-    },
+    textSearch: function(){
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        // var parentElement = document.getElementById(id);
-        // var listeningElement = parentElement.querySelector('.listening');
-        // var receivedElement = parentElement.querySelector('.received');
-
-        // listeningElement.setAttribute('style', 'display:none;');
-        // receivedElement.setAttribute('style', 'display:block;');
-
-        // console.log('Received Event: ' + id);
     },
 
     imageSearch: function(){
-      alert('New image search');
       $.ajax({
         url: 'http://api.indix.com/api/beta/products/?query=nike&app_id=54213813&app_key=7f5198b4650d239a4bf43bfbeced29bb',
         dataType: "json",
@@ -67,8 +84,6 @@ var app = {
     },
 
     scan: function() {
-        alert('scanning');
-
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) {
@@ -83,8 +98,19 @@ var app = {
                 "text: " + result.text + "\n" +
                 "format: " + result.format + "\n" +
                 "cancelled: " + result.cancelled + "\n");
-            document.getElementById("info").innerHTML = result.text;
-            console.log(result);
+            $('.scan').parent().find('.ui-btn-text').html('scanning...')
+            $.ajax({
+              url: app.HOST_URL + "&q=" + 'a',
+              dataType: "json",
+              success: function(response){
+                $('.scan').parent().find('.ui-btn-text').html('scan success.');
+                alert((response || {}).status);
+              },
+              error: function(msg){
+                $('.scan').parent().find('.ui-btn-text').html('scan error.');
+                alert("Error in ajax:" + JSON.stringify(msg));
+              }
+            })
             /*
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
@@ -109,3 +135,8 @@ var app = {
     }
 
 };
+
+$(function(){
+  app.initialize();
+})
+

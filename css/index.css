@@ -36,19 +36,65 @@ body {
 }
 
 /* Portrait layout (default) */
-.app {
-   text-align: center;
-   margin-top: 100px;
-}
 
 button, input{
     display:block;
     margin: 20px auto;
 }
 
-.ui-btn{
-  margin: 3.5em 0;
+.home{
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  color: #555;
+}
+
+input.ui-input-text{
+  background: #ddd;
+}
+
+.ui-li-divider{
+  background: white;
+  color: #555;
+  margin-top: 50px;
+}
+.ui-li-static{
+  background: #fff;
+}
+
+
+.products .ui-btn{
   padding: 10px 0;
+  width: 80%;
+}
+
+.products h1{
+  text-transform: capitalize;
+}
+
+input.ui-input-text.text-search{
+  display: none;
+  width: 80%;
+}
+
+.products-list .ui-btn{
+  width: 100%;
+}
+
+.products-list .store-image{
+  background: #005387;
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 15px;
+  box-shadow: 0 0 1px #000;
+}
+
+.products-list .price{
+  font-size: 40px;
+  font-weight: bold;
+  float: right;
+  margin-right: 20px;
+  display: inline-block;
 }
 
 h1{

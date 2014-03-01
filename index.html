@@ -30,16 +30,11 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            $(document).bind( "mobileinit", function() {
-              alert('mobile init');
-              $.support.cors = true;
-              $.mobile.allowCrossDomainPages = true;
-            });
             $(function(){
               $(document).ready(function() {
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
-                app.initialize();
+                //app.initialize();
               });
 
             })
@@ -49,10 +44,24 @@
       <div class="app" data-role="page" data-theme="b">
         <div data-role="content" data-theme="b">
           <h1>Search products -$F5</h1>
-          <div data-ajax="false">
-            <button  data-theme="b" class="ui-btn" id="scan">Search by Bar code</button>
-            <button  data-theme="b" class="ui-btn" id="imageSearch">Search by Image</button>
-            <a target="_self" href="http://api.indix.com/api/beta/products/?query=nike&app_id=54213813&app_key=7f5198b4650d239a4bf43bfbeced29bb" data-theme="b" class="ui-btn" id="text">Text Search</a>
+          <div>
+            <ul data-role="listview">
+              <li>
+                <a href="products.html?type=barcode">
+                  <h3>Barcode Search</h3>
+                </a>
+              </li>
+              <li>
+                <a href="products.html?type=image">
+                  <h3>Image Search</h3>
+                </a>
+              </li>
+              <li>
+                <a href="products.html?type=text">
+                  <h3>Text Search</h3>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
