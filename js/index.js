@@ -58,7 +58,7 @@ var app = {
           alert((response || {}).status);
         },
         error: function(msg){
-          alert("Error:" + msg);
+          alert("Error:" + JSON.stringify(msg));
         }
       })
     },
