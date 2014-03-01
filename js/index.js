@@ -26,9 +26,8 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
         document.getElementById('scan').addEventListener('click', this.scan, false);
-        document.getElementById('encode').addEventListener('click', this.encode, false);
+        document.getElementById('imageSearch').addEventListener('click', this.imageSearch, false);
     },
 
     // deviceready Event Handler
@@ -51,18 +50,31 @@ var app = {
         console.log('Received Event: ' + id);
     },
 
+    imageSearch: function(){
+      $.ajax({
+        url: 'http://api.indix.com/api/beta/products/?query=nike&app_id=54213813&app_key=7f5198b4650d239a4bf43bfbeced29bb',
+        type: 'GET',
+        success: function(response){
+          alert((response || {}).status);
+        },
+        error: function(msg){
+          alert("Error:" + msg);
+        }
+      })
+    },
+
     scan: function() {
         console.log('scanning');
-        
+
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.scan( function (result) { 
+        scanner.scan( function (result) {
 
             alert("Save  The Hacker " + "\n" +
-            "We got a barcode\n" + 
-            "Result: " + result.text + "\n" + 
-            "Format: " + result.format + "\n" + 
-            "Cancelled: " + result.cancelled);  
+            "We got a barcode\n" +
+            "Result: " + result.text + "\n" +
+            "Format: " + result.format + "\n" +
+            "Cancelled: " + result.cancelled);
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
@@ -76,8 +88,8 @@ var app = {
             }
             */
 
-        }, function (error) { 
-            console.log("Scanning failed: ", error); 
+        }, function (error) {
+            console.log("Scanning failed: ", error);
         } );
     },
 
