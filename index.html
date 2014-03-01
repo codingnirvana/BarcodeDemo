@@ -29,19 +29,21 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-
+            $(document).bind( "mobileinit", function() {
+              alert('mobile init');
+              $.support.cors = true;
+              $.mobile.allowCrossDomainPages = true;
+              $.mobile.ajaxEnabled = false;
+            });
             $(function(){
               $(document).ready(function() {
                 alert("mobileinit1 - " + ($.support || {}).cors + "-" + ($.mobile || {}).allowCrossDomainPages);
                 $.support.cors = true;
                 $.mobile.allowCrossDomainPages = true;
+                $.mobile.ajaxEnabled = false;
                 app.initialize();
               });
-              $(document).bind( "mobileinit", function() {
-                alert('mobile init');
-                $.support.cors = true;
-                $.mobile.allowCrossDomainPages = true;
-              });
+
             })
         </script>
     </head>
