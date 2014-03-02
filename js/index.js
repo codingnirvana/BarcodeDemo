@@ -119,13 +119,12 @@ var app = {
         //     "Cancelled: " + result.cancelled);
             //if(!result) result = {};
             $('.scan').parent().find('.ui-btn-text').html('scanning...')
-            // $.ajax({
-            //   url: app.HOST_URL + "?q=" + '9788190453011',
-            //   dataType: "json",
-            //   success: function(response){
-              var response = app.sample;
+            $.ajax({
+              url: app.HOST_URL + "?q=" + '9788190453011',
+              dataType: "json",
+              success: function(response){
+                if(!response) response = {};
                 $('.scan').parent().find('.ui-btn-text').html('scan success.');
-                alert((response || {}).status);
                 $('.products h1').html(response.title);
                 $('.products-list').empty();
                 $(response.offers).each(function(){
@@ -139,12 +138,12 @@ var app = {
                   $('.products-list').append(el);
                 })
                  $('.products-list').listview('refresh');
-            //   },
-            //   error: function(msg){
-            //     $('.scan').parent().find('.ui-btn-text').html('scan error.');
-            //     alert("Error in ajax:" + JSON.stringify(msg));
-            //   }
-            // })
+              },
+              error: function(msg){
+                $('.scan').parent().find('.ui-btn-text').html('scan error.');
+                alert("Error in ajax:" + JSON.stringify(msg));
+              }
+            })
 
            // console.log("Scanner result: \n" +
            //      "text: " + result.text + "\n" +
