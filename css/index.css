@@ -118,6 +118,10 @@ input.ui-input-text.text-search{
   text-transform: capitalize;
   font-weight: normal;
   float: left;
+  width: 170px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .products-list .price{

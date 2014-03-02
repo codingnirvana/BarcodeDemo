@@ -177,6 +177,7 @@ var app = {
               url: url,
               dataType: "json",
               success: function(response){
+          // var response = app.sample;
                 if(!response) response = {};
                 $('.scan').parent().find('.ui-btn-text').html('scan success.');
                 $('.products h1').html(response.title);
@@ -223,6 +224,5 @@ var app = {
             alert("encoding failed: " + fail);
           }
         );
-
     }
 };
