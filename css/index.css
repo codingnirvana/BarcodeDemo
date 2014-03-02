@@ -45,7 +45,7 @@ button, input{
 .home.ui-link{
   position: absolute;
   right: 10px;
-  top: 50px;
+  top: 10px;
   color: #555;
 }
 
@@ -71,7 +71,7 @@ input.ui-input-text{
   padding: 10px 0;
   width: 50%;
   border-radius: 5px;
-  margin-left: 15px;
+  margin: 0 auto;
 }
 
 .products h1{
@@ -81,6 +81,11 @@ input.ui-input-text{
 
 .app-list h1{
   font-size: 1.6em;
+  text-transform: capitalize;
+}
+
+.home img{
+  max-height: 50px;
 }
 
 input.ui-input-text.text-search{

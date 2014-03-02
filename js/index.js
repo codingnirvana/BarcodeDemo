@@ -87,12 +87,10 @@ var app = {
     },
 
     upcSearch: function(){
-      alert('upcSearch');
       app.scan({'isUPC': true});
     },
 
     imageSearch: function(){
-      alert('imageSearch..');
       function onSuccess(imageURI) {
         alert('imageURI:' + imageURI);
         var image = document.getElementById('myImage');
@@ -114,7 +112,6 @@ var app = {
 
     scan: function(options) {
         console.log('scanning');
-        alert('scanning - isUPC:' + (options || {}).isUPC);
 
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
