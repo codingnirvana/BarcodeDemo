@@ -74,6 +74,12 @@ input.ui-input-text{
   margin: 0 auto;
 }
 
+.products .author, .products .minPrice{
+  display: block;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
 .products h1{
   text-transform: capitalize;
   font-weight: normal;
@@ -124,7 +130,7 @@ input.ui-input-text.text-search{
 }
 
 .products h1{
-    text-align:left;
+    text-align:center;
 }
 
 #deviceready, .info{

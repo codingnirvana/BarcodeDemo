@@ -18,7 +18,7 @@
  */
 var app = {
 
-    HOST_URL : "http://41760a89.ngrok.com/products",
+    HOST_URL : "http://41760a89.ngrok.com/products/",
     type: 'barcode',
 
     // Application Constructor
@@ -126,23 +126,28 @@ var app = {
             $('.scan').parent().find('.ui-btn-text').html('scanning...')
             var url = "";
             if((options || {}).isUPC)
-              url = app.HOST_URL + "?upc=" + (result.text ? result.text : '6438158564411');
+              url = app.HOST_URL + "upc?q=" + (result.text ? result.text : '6438158564411');
             else
-              url = app.HOST_URL + "?q=" + (result.text ? result.text : '9788190453011');
+              url = app.HOST_URL + "barcode?q=" + (result.text ? result.text : '9788190453011');
             $.ajax({
               url: url,
               dataType: "json",
               success: function(response){
+            var response = app.sample;
                 if(!response) response = {};
                 $('.scan').parent().find('.ui-btn-text').html('scan success.');
                 $('.products h1').html(response.title);
+                if(response.author)
+                  $('.products .author').html("Author: " + response.author);
+                if(response.minPrice)
+                  $('.products .minPrice').html("Best Price: &#x20B9;" + response.minPrice);
                 $('.products-list').empty();
                 $(response.offers).each(function(){
                   var el =  '<li>\
                           <a href="' + this.storeUrl + '">\
                             <img class="store-image" src="' + this.storeLogoUrl + '" />\
                             <label class="store-name">' + this.storeName + '</label>\
-                            <label class="price">$' + this.price + '</label>\
+                            <label class="price">&#x20B9;' + this.price + '</label>\
                           </a>\
                         </li>'
                   $('.products-list').append(el);
