@@ -181,7 +181,7 @@ var app = {
                 $('.scan').parent().find('.ui-btn-text').html('scan success.');
                 $('.products h1').html(response.title);
                 if(response.author)
-                  $('.products .author').html("Author: " + response.author);
+                  $('.products .author').html(((options || {}).isUPC ? "Manufacturer: " : "Author: ") + response.author);
                 if(response.minPrice)
                   $('.products .minPrice').html("Best Price: &#x20B9;" + response.minPrice);
                 $('.products-list').empty();
