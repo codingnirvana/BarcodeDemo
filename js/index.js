@@ -108,21 +108,22 @@ var app = {
         console.log('scanning');
         alert('scanning');
 
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+        // var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-        scanner.scan( function (result) {
+        // scanner.scan( function (result) {
 
-            alert("Save  The Hacker " + "\n" +
-            "We got a barcode\n" +
-            "Result: " + result.text + "\n" +
-            "Format: " + result.format + "\n" +
-            "Cancelled: " + result.cancelled);
-
+        //     alert("Save  The Hacker " + "\n" +
+        //     "We got a barcode\n" +
+        //     "Result: " + result.text + "\n" +
+        //     "Format: " + result.format + "\n" +
+        //     "Cancelled: " + result.cancelled);
+            if(!result) result = {};
             $('.scan').parent().find('.ui-btn-text').html('scanning...')
-            $.ajax({
-              url: app.HOST_URL + "?q=" + '9788190453011',
-              dataType: "json",
-              success: function(response){
+            // $.ajax({
+            //   url: app.HOST_URL + "?q=" + '9788190453011',
+            //   dataType: "json",
+            //   success: function(response){
+              var response = app.sample;
                 $('.scan').parent().find('.ui-btn-text').html('scan success.');
                 alert((response || {}).status);
                 $('.products h1').html(response.title);
@@ -138,12 +139,12 @@ var app = {
                   $('.products-list').append(el);
                 })
                  $('.products-list').listview('refresh');
-              },
-              error: function(msg){
-                $('.scan').parent().find('.ui-btn-text').html('scan error.');
-                alert("Error in ajax:" + JSON.stringify(msg));
-              }
-            })
+            //   },
+            //   error: function(msg){
+            //     $('.scan').parent().find('.ui-btn-text').html('scan error.');
+            //     alert("Error in ajax:" + JSON.stringify(msg));
+            //   }
+            // })
 
            console.log("Scanner result: \n" +
                 "text: " + result.text + "\n" +
@@ -159,9 +160,9 @@ var app = {
             }
             */
 
-        }, function (error) {
-            console.log("Scanning failed: ", error);
-        } );
+        // }, function (error) {
+        //     console.log("Scanning failed: ", error);
+        // } );
     },
 
     encode: function() {
@@ -174,6 +175,51 @@ var app = {
           }
         );
 
-    }
+    },
+
+    sample: {
+title: "Stay Hungry Stay Foolish",
+imageUrl: "",
+author: "Rashmi Bansal",
+minPrice: "Best Price: Rs. 63",
+offers: [
+{
+storeName: "amazonkindle",
+storeLogoUrl: "http://c223968.r68.cf1.rackcdn.com/amazon_kindle_store.png",
+price: "63",
+storeUrl: "http://www.mysmartprice.com/out/sendtostore.php?store=amazon&top_category=books&url=http://www.amazon.in/Stay-Hungry-Foolish-rashmi-Bansal-ebook/dp/B008R86NJ4/ref=tmm_kin_title_0/277-5981452-0776555"
+},
+{
+storeName: "amazon",
+storeLogoUrl: "http://c223968.r68.cf1.rackcdn.com/amazon_store.png",
+price: "96",
+storeUrl: "http://www.mysmartprice.com/out/sendtostore.php?store=amazon&top_category=books&url=http://www.amazon.in/gp/product/8190453017&store=amazon"
+},
+{
+storeName: "infibeam",
+storeLogoUrl: "http://c0028655.cdn1.cloudfiles.rackspacecloud.com/infibeam_store.png",
+price: "113",
+storeUrl: "http://www.mysmartprice.com/out/sendtostore.php?store=infibeam&top_category=books&url=http://www.infibeam.com/Books/info/rashmi-bansal/stay-hungry-stay-foolish/9788190453011.html&store=infibeam"
+},
+{
+storeName: "uread",
+storeLogoUrl: "http://c0028655.cdn1.cloudfiles.rackspacecloud.com/uread_store.png",
+price: "116",
+storeUrl: "http://www.mysmartprice.com/out/sendtostore.php?store=uread&top_category=books&url=http://www.uread.com/book/hungry-stay-foolish-bansal-rashmi/9788190453011&store=uread"
+},
+{
+storeName: "bookadda",
+storeLogoUrl: "http://c0028655.cdn1.cloudfiles.rackspacecloud.com/bookadda_store.png",
+price: "119",
+storeUrl: "http://www.mysmartprice.com/out/sendtostore.php?store=bookadda&top_category=books&url=http://www.bookadda.com/books/stay-hungry-stay-rashmi-bansal-8190453017-9788190453011&store=bookadda"
+},
+{
+storeName: "ebay",
+storeLogoUrl: "http://c223968.r68.cf1.rackcdn.com/ebay_store.png",
+price: "125",
+storeUrl: "http://www.mysmartprice.com/out/sendtostore.php?store=ebay&top_category=books&url=http%3A%2F%2Frover.ebay.com%2Frover%2F1%2F4686-145536-10941-3%2F2%3F%26site%3DPartnership_MSP_Books%26mpre%3Dhttp%3A%2F%2Fread.ebay.in%2Fisbn%3Fisbn%3D9788190453011&store=ebay"
+}
+]
+}
 
 };

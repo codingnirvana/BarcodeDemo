@@ -13,7 +13,7 @@
         PhoneGap Team
     </author>
 
-    <access origin="http://41760a89.ngrok.com/products" subdomain="true" />
+    <access origin="*" subdomain="true" />
 
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 
