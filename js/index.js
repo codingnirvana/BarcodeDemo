@@ -53,11 +53,11 @@ var app = {
           $('input.ui-input-text.text-search').css('display','none');
           $('.scan').off('click').on('click', this.imageSearch);
           break;
-        $('.products-list').empty();
-        $('.products h1').html('');
-        $('.products .author').html('');
-        $('.products .minPrice').html('');
       }
+      $('.products-list').empty();
+      $('.products h1').html('');
+      $('.products .author').html('');
+      $('.products .minPrice').html('');
     },
     // Bind Event Listeners
     //
