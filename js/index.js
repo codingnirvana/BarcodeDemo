@@ -91,16 +91,23 @@ var app = {
     },
 
     imageSearch: function(){
-      $.ajax({
-        url: 'http://api.indix.com/api/beta/products/?query=nike&app_id=54213813&app_key=7f5198b4650d239a4bf43bfbeced29bb',
-        dataType: "json",
-        success: function(response){
-          alert((response || {}).status);
-        },
-        error: function(msg){
-          alert("Error in ajax:" + JSON.stringify(msg));
-        }
-      })
+      alert('imageSearch..');
+      function onSuccess(imageURI) {
+        alert('imageURI:' + imageURI);
+        var image = document.getElementById('myImage');
+        image.src = imageURI;
+      }
+
+      function onFail(message) {
+        alert('Image Failed because: ' + message);
+      }
+
+      alert('Image : ' + navigator);
+      alert('Image : ' + navigator.camera);
+      navigator.camera.getPicture(onSuccess, onFail, {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
     },
 
 
