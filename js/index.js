@@ -110,13 +110,13 @@ var app = {
         alert('Please enter a text'); return;
       }
       var url = app.HOST_URL + "text?q=" + text;
-      $('.scan').parent().find('.ui-btn-text').html('scanning...')
+      $('.scan').parent().find('.ui-btn-text').html('loading...')
       $.ajax({
         url: url,
         dataType: "json",
         success: function(response){
           if(!response) response = {};
-          $('.scan').parent().find('.ui-btn-text').html('scan success.');
+          $('.scan').parent().find('.ui-btn-text').html('Text match success');
           $('.products h1').html(response.title);
           if(response.author)
             $('.products .author').html("Author: " + response.author);
@@ -136,7 +136,7 @@ var app = {
            $('.products-list').listview('refresh');
         },
         error: function(msg){
-          $('.scan').parent().find('.ui-btn-text').html('scan error.');
+          $('.scan').parent().find('.ui-btn-text').html('Text match error.');
           alert("Error in ajax:" + JSON.stringify(msg));
         }
       });
