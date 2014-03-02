@@ -39,9 +39,9 @@ var app = {
           $('.scan').off('click').on('click', this.imageSearch);
           break;
         case 'text':
-          $('input.ui-input-text.text-search').css('display','block');
-          $('.scan').parent().find('.ui-btn-text').html('Search');
-          $('.scan').off('click').on('click', this.textSearch);
+          //$('input.ui-input-text.text-search').css('display','block');
+          $('.scan').parent().find('.ui-btn-text').html('Scan UPC');
+          $('.scan').off('click').on('click', this.upcSearch);
           break;
       }
     },
@@ -86,8 +86,9 @@ var app = {
       }
     },
 
-    textSearch: function(){
-
+    upcSearch: function(){
+      alert('upcSearch');
+      app.scan({'isUPC': true});
     },
 
     imageSearch: function(){
@@ -111,9 +112,9 @@ var app = {
     },
 
 
-    scan: function() {
+    scan: function(options) {
         console.log('scanning');
-        alert('scanning');
+        alert('scanning - isUPC:' + (options || {}).isUPC);
 
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
@@ -126,8 +127,13 @@ var app = {
             "Cancelled: " + result.cancelled);
             if(!result) result = {};
             $('.scan').parent().find('.ui-btn-text').html('scanning...')
+            var url = "";
+            if((options || {}).isUPC)
+              url = app.HOST_URL + "?upc=" + (result.text ? result.text : '6438158564411');
+            else
+              url = app.HOST_URL + "?q=" + (result.text ? result.text : '9788190453011');
             $.ajax({
-              url: app.HOST_URL + "?q=" + '9788190453011',
+              url: url,
               dataType: "json",
               success: function(response){
                 if(!response) response = {};

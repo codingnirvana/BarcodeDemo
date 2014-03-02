@@ -29,6 +29,10 @@
         <script src="http://debug.phonegap.com/target/target-script-min.js#anonymous"></script>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="barcodescanner.js"></script>
+        <script type="text/javascript" src="childbrowser.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             $(function(){
               //document.getElementById('scan').addEventListener('click', app.scan, false);
@@ -55,39 +59,39 @@
     </head>
     <body>
         <div class="app" data-role="page" data-theme="b" id="app">
-        <div data-role="content" data-theme="b">
-          <div class="app-list">
-            <h1>Search products</h1>
-            <ul data-role="listview">
-              <li>
-                <a class="link" data-type="barcode" href="javascript:void(0);">
-                  <h3>Barcode Search</h3>
-                </a>
-              </li>
-              <li>
-                <a class="link"  data-type="image" href="javascript:void(0);">
-                  <h3>Image Search</h3>
-                </a>
-              </li>
-              <li>
-                <a class="link" data-type="text" href="javascript:void(0);">
-                  <h3>Text Search</h3>
-                </a>
-              </li>
-            </ul>
+          <div data-role="content" data-theme="b">
+            <div class="app-list">
+              <h1>Search products</h1>
+              <ul data-role="listview">
+                <li>
+                  <a class="link" data-type="barcode" href="javascript:void(0);">
+                    <h3>Barcode Search</h3>
+                  </a>
+                </li>
+                <li>
+                  <a class="link"  data-type="image" href="javascript:void(0);">
+                    <h3>Image Search</h3>
+                  </a>
+                </li>
+                <li>
+                  <a class="link" data-type="text" href="javascript:void(0);">
+                    <h3>UPC Search</h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="products">
-          <input type="text" class="text-search" placeholder="Search product" />
-          <button class="scan">Scan bar code</button>
-          <a class="home" href="javascript:void(0);" target="_self">Home</a>
-          <h1></h1>
+          <div class="products">
+            <input type="text" class="text-search" placeholder="Search product" />
+            <button class="scan">Scan bar code</button>
+            <a class="home" href="javascript:void(0);" target="_self">Home</a>
+            <h1></h1>
+            <div>
+              <ul class="products-list" data-role="listview">
+              </ul>
+            </div>
+          </div>
           <div>
-            <ul class="products-list" data-role="listview">
-            </ul>
-          </div>
-        </div>
-        <div>
             <h1 style="display:none">Apache Cordova</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -96,11 +100,7 @@
             <p style="display:none"><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
             <p  style="display:none"><a href="#" class="topcoat-button" id="encode">ENCODE</a></p>
             <p id="info" style="display:none"></p>
-
+          </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="barcodescanner.js"></script>
-        <script type="text/javascript" src="childbrowser.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

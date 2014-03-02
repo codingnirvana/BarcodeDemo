@@ -69,12 +69,18 @@ input.ui-input-text{
 
 .products .ui-btn{
   padding: 10px 0;
-  width: 80%;
+  width: 50%;
+  border-radius: 5px;
+  margin-left: 15px;
 }
 
 .products h1{
   text-transform: capitalize;
   font-weight: normal;
+}
+
+.app-list h1{
+  font-size: 1.6em;
 }
 
 input.ui-input-text.text-search{

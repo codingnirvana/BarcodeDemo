@@ -22,6 +22,9 @@
        <param name="domain" value="http://debug.phonegap.com"/>
        <param name="key" value="willoughby"/>
     </feature>
+    <feature name="Camera">
+      <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+    </feature>
 
     <preference name="phonegap-version" value="3.1.0" />
     <preference name="orientation"      value="default" />
