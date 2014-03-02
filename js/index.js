@@ -34,7 +34,7 @@ var app = {
           $('.scan').off('click').on('click', this.scan);
           break;
         case 'upc':
-          $('.scan').parent().find('.ui-btn-text').html('Scan bar code');
+          $('.scan').parent().find('.ui-btn-text').html('Scan UPC');
           $('input.ui-input-text.text-search').css('display','none');
           $('.scan').off('click').on('click', this.upcSearch);
           break;
@@ -53,6 +53,10 @@ var app = {
           $('input.ui-input-text.text-search').css('display','none');
           $('.scan').off('click').on('click', this.imageSearch);
           break;
+        $('.products-list').empty();
+        $('.products h1').html('');
+        $('.products .author').html('');
+        $('.products .minPrice').html('');
       }
     },
     // Bind Event Listeners
@@ -102,7 +106,11 @@ var app = {
 
     textSearch: function(){
       var text = $('.text-search').val();
+      if(!text){
+        alert('Please enter a text'); return;
+      }
       var url = app.HOST_URL + "text?q=" + text;
+      $('.scan').parent().find('.ui-btn-text').html('scanning...')
       $.ajax({
         url: url,
         dataType: "json",
