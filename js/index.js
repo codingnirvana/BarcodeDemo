@@ -33,15 +33,25 @@ var app = {
           $('input.ui-input-text.text-search').css('display','none');
           $('.scan').off('click').on('click', this.scan);
           break;
+        case 'upc':
+          $('.scan').parent().find('.ui-btn-text').html('Scan bar code');
+          $('input.ui-input-text.text-search').css('display','none');
+          $('.scan').off('click').on('click', this.upcSearch);
+          break;
         case 'image':
           $('.scan').parent().find('.ui-btn-text').html('Scan image');
           $('input.ui-input-text.text-search').css('display','none');
           $('.scan').off('click').on('click', this.imageSearch);
           break;
         case 'text':
-          //$('input.ui-input-text.text-search').css('display','block');
-          $('.scan').parent().find('.ui-btn-text').html('Scan UPC');
-          $('.scan').off('click').on('click', this.upcSearch);
+          $('input.ui-input-text.text-search').css('display','block');
+          $('.scan').parent().find('.ui-btn-text').html('Scan Text');
+          $('.scan').off('click').on('click', this.textSearch);
+          break;
+        case 'ocr':
+          $('.scan').parent().find('.ui-btn-text').html('Scan OCR');
+          $('input.ui-input-text.text-search').css('display','none');
+          $('.scan').off('click').on('click', this.imageSearch);
           break;
       }
     },
@@ -90,6 +100,40 @@ var app = {
       app.scan({'isUPC': true});
     },
 
+    textSearch: function(){
+      var text = $('.text-search').val();
+      var url = app.HOST_URL + "text?q=" + text;
+      $.ajax({
+        url: url,
+        dataType: "json",
+        success: function(response){
+          if(!response) response = {};
+          $('.scan').parent().find('.ui-btn-text').html('scan success.');
+          $('.products h1').html(response.title);
+          if(response.author)
+            $('.products .author').html("Author: " + response.author);
+          if(response.minPrice)
+            $('.products .minPrice').html("Best Price: &#x20B9;" + response.minPrice);
+          $('.products-list').empty();
+          $(response.offers).each(function(){
+            var el =  '<li>\
+                    <a href="' + this.storeUrl + '">\
+                      <img class="store-image" src="' + this.storeLogoUrl + '" />\
+                      <label class="store-name">' + this.storeName + '</label>\
+                      <label class="price">&#x20B9;' + this.price + '</label>\
+                    </a>\
+                  </li>'
+            $('.products-list').append(el);
+          })
+           $('.products-list').listview('refresh');
+        },
+        error: function(msg){
+          $('.scan').parent().find('.ui-btn-text').html('scan error.');
+          alert("Error in ajax:" + JSON.stringify(msg));
+        }
+      });
+    },
+
     imageSearch: function(){
       function onSuccess(imageURI) {
         alert('imageURI:' + imageURI);
@@ -133,7 +177,6 @@ var app = {
               url: url,
               dataType: "json",
               success: function(response){
-            var response = app.sample;
                 if(!response) response = {};
                 $('.scan').parent().find('.ui-btn-text').html('scan success.');
                 $('.products h1').html(response.title);
