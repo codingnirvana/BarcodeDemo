@@ -18,7 +18,7 @@
  */
 var app = {
 
-    HOST_URL : "http://tuffnut.ngrok.com/products/",
+    HOST_URL : "http://41760a89.ngrok.com/products/",
     type: 'barcode',
 
     // Application Constructor

@@ -50,9 +50,8 @@ button, input{
 }
 
 input {
-    -webkit-user-select: auto !important;
+-webkit-user-select: none !important;
 }
-
 input.ui-input-text{
   background: #ddd;
 }
