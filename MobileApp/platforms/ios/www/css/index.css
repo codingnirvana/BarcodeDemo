@@ -49,6 +49,10 @@ button, input{
   color: #555;
 }
 
+input {
+    -webkit-user-select: auto !important;
+}
+
 input.ui-input-text{
   background: #ddd;
 }

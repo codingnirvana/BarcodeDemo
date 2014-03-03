@@ -43,44 +43,6 @@
 		5AA0E66D1729F45B000DC89A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66C1729F45B000DC89A /* OpenAL.framework */; };
 		5AA0E66F1729F460000DC89A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66E1729F460000DC89A /* ImageIO.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
-		C0C685C018C497BF003E5CCC /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
-		C0C685C118C497BF003E5CCC /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052E1370CCF300D202BF /* icon-72.png */; };
-		C0C685C218C497BF003E5CCC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052F1370CCF300D202BF /* icon.png */; };
-		C0C685C318C497BF003E5CCC /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
-		C0C685C418C497BF003E5CCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDC13BBADB100FB74C0 /* Localizable.strings */; };
-		C0C685C518C497BF003E5CCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F766FDF13BBADB100FB74C0 /* Localizable.strings */; };
-		C0C685C618C497BF003E5CCC /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
-		C0C685C718C497BF003E5CCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434314DC770100060A13 /* Localizable.strings */; };
-		C0C685C818C497BF003E5CCC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
-		C0C685C918C497BF003E5CCC /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */; };
-		C0C685CA18C497BF003E5CCC /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB8154F3926009F9C59 /* Default-Landscape~ipad.png */; };
-		C0C685CB18C497BF003E5CCC /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB9154F3926009F9C59 /* Default-Portrait@2x~ipad.png */; };
-		C0C685CC18C497BF003E5CCC /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBA154F3926009F9C59 /* Default-Portrait~ipad.png */; };
-		C0C685CD18C497BF003E5CCC /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBB154F3926009F9C59 /* Default@2x~iphone.png */; };
-		C0C685CE18C497BF003E5CCC /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBBC154F3926009F9C59 /* Default~iphone.png */; };
-		C0C685CF18C497BF003E5CCC /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
-		C0C685D018C497BF003E5CCC /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
-		C0C685D218C497BF003E5CCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		C0C685D318C497BF003E5CCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
-		C0C685D418C497BF003E5CCC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
-		C0C685D618C497BF003E5CCC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5BE109A6A2B0062928A /* CoreLocation.framework */; };
-		C0C685D718C497BF003E5CCC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66E1729F460000DC89A /* ImageIO.framework */; };
-		C0C685D818C497BF003E5CCC /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66C1729F45B000DC89A /* OpenAL.framework */; };
-		C0C685D918C497BF003E5CCC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
-		C0C685DA18C497BF003E5CCC /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
-		C0C685DB18C497BF003E5CCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		C0C685DC18C497BF003E5CCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C0C685DD18C497BF003E5CCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		C0C685DE18C497BF003E5CCC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5B4109A6A2B0062928A /* AddressBook.framework */; };
-		C0C685DF18C497BF003E5CCC /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5B6109A6A2B0062928A /* AddressBookUI.framework */; };
-		C0C685E018C497BF003E5CCC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5B8109A6A2B0062928A /* AudioToolbox.framework */; };
-		C0C685E118C497BF003E5CCC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5BA109A6A2B0062928A /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C0C685E218C497BF003E5CCC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5BC109A6A2B0062928A /* CFNetwork.framework */; };
-		C0C685E318C497BF003E5CCC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C0109A6A2B0062928A /* MediaPlayer.framework */; };
-		C0C685E418C497BF003E5CCC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C2109A6A2B0062928A /* QuartzCore.framework */; };
-		C0C685E518C497BF003E5CCC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */; };
-		C0C685E618C497BF003E5CCC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
-		C0C685E718C497BF003E5CCC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
@@ -94,13 +56,6 @@
 			remoteInfo = CordovaLib;
 		};
 		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = CordovaLib;
-		};
-		C0C685BD18C497BF003E5CCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 1;
@@ -153,7 +108,6 @@
 		5AEE5B34173C68D80009041E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* SmartShop-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SmartShop-Info.plist"; path = "../SmartShop-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		C0C685EB18C497BF003E5CCC /* SmartShop copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartShop copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C685EC18C497BF003E5CCC /* SmartShop copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartShop copy-Info.plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "$F5 - Tuffnut/config.xml"; sourceTree = "<group>"; };
@@ -185,31 +139,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0C685D518C497BF003E5CCC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0C685D618C497BF003E5CCC /* CoreLocation.framework in Frameworks */,
-				C0C685D718C497BF003E5CCC /* ImageIO.framework in Frameworks */,
-				C0C685D818C497BF003E5CCC /* OpenAL.framework in Frameworks */,
-				C0C685D918C497BF003E5CCC /* AssetsLibrary.framework in Frameworks */,
-				C0C685DA18C497BF003E5CCC /* libCordova.a in Frameworks */,
-				C0C685DB18C497BF003E5CCC /* Foundation.framework in Frameworks */,
-				C0C685DC18C497BF003E5CCC /* UIKit.framework in Frameworks */,
-				C0C685DD18C497BF003E5CCC /* CoreGraphics.framework in Frameworks */,
-				C0C685DE18C497BF003E5CCC /* AddressBook.framework in Frameworks */,
-				C0C685DF18C497BF003E5CCC /* AddressBookUI.framework in Frameworks */,
-				C0C685E018C497BF003E5CCC /* AudioToolbox.framework in Frameworks */,
-				C0C685E118C497BF003E5CCC /* AVFoundation.framework in Frameworks */,
-				C0C685E218C497BF003E5CCC /* CFNetwork.framework in Frameworks */,
-				C0C685E318C497BF003E5CCC /* MediaPlayer.framework in Frameworks */,
-				C0C685E418C497BF003E5CCC /* QuartzCore.framework in Frameworks */,
-				C0C685E518C497BF003E5CCC /* SystemConfiguration.framework in Frameworks */,
-				C0C685E618C497BF003E5CCC /* MobileCoreServices.framework in Frameworks */,
-				C0C685E718C497BF003E5CCC /* CoreMedia.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -230,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* SmartShop.app */,
-				C0C685EB18C497BF003E5CCC /* SmartShop copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -397,25 +325,6 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* SmartShop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C0C685BB18C497BF003E5CCC /* SmartShop copy */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C0C685E818C497BF003E5CCC /* Build configuration list for PBXNativeTarget "SmartShop copy" */;
-			buildPhases = (
-				C0C685BE18C497BF003E5CCC /* Copy www directory */,
-				C0C685BF18C497BF003E5CCC /* Resources */,
-				C0C685D118C497BF003E5CCC /* Sources */,
-				C0C685D518C497BF003E5CCC /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C0C685BC18C497BF003E5CCC /* PBXTargetDependency */,
-			);
-			name = "SmartShop copy";
-			productName = "$F5 - Tuffnut";
-			productReference = C0C685EB18C497BF003E5CCC /* SmartShop copy.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -449,7 +358,6 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* SmartShop */,
-				C0C685BB18C497BF003E5CCC /* SmartShop copy */,
 			);
 		};
 /* End PBXProject section */
@@ -489,49 +397,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0C685BF18C497BF003E5CCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0C685C018C497BF003E5CCC /* config.xml in Resources */,
-				C0C685C118C497BF003E5CCC /* icon-72.png in Resources */,
-				C0C685C218C497BF003E5CCC /* icon.png in Resources */,
-				C0C685C318C497BF003E5CCC /* icon@2x.png in Resources */,
-				C0C685C418C497BF003E5CCC /* Localizable.strings in Resources */,
-				C0C685C518C497BF003E5CCC /* Localizable.strings in Resources */,
-				C0C685C618C497BF003E5CCC /* MainViewController.xib in Resources */,
-				C0C685C718C497BF003E5CCC /* Localizable.strings in Resources */,
-				C0C685C818C497BF003E5CCC /* Localizable.strings in Resources */,
-				C0C685C918C497BF003E5CCC /* Default-Landscape@2x~ipad.png in Resources */,
-				C0C685CA18C497BF003E5CCC /* Default-Landscape~ipad.png in Resources */,
-				C0C685CB18C497BF003E5CCC /* Default-Portrait@2x~ipad.png in Resources */,
-				C0C685CC18C497BF003E5CCC /* Default-Portrait~ipad.png in Resources */,
-				C0C685CD18C497BF003E5CCC /* Default@2x~iphone.png in Resources */,
-				C0C685CE18C497BF003E5CCC /* Default~iphone.png in Resources */,
-				C0C685CF18C497BF003E5CCC /* Default-568h@2x~iphone.png in Resources */,
-				C0C685D018C497BF003E5CCC /* icon-72@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		304B58A110DAC018002A0835 /* Copy www directory */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy www directory";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "SRC_DIR=\"www/\"\nDST_DIR=\"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/www\"\nCOPY_HIDDEN=\nORIG_IFS=$IFS\nIFS=$(echo -en \"\\n\\b\")\n\nif [[ ! -e \"$SRC_DIR\" ]]; then\n  echo \"Path does not exist: $SRC_DIR\"\n  exit 1\nfi\n\nif [[ -n $COPY_HIDDEN ]]; then\n  alias do_find='find \"$SRC_DIR\"'\nelse\n  alias do_find='find -L \"$SRC_DIR\" -name \".*\" -prune -o'\nfi\n\ntime (\n# Code signing files must be removed or else there are\n# resource signing errors.\nrm -rf \"$DST_DIR\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/_CodeSignature\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/PkgInfo\" \\\n       \"$BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/embedded.mobileprovision\"\n\n# Directories\nfor p in $(do_find -type d -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  mkdir \"$DST_DIR$subpath\" || exit 1\ndone\n\n# Symlinks\nfor p in $(do_find -type l -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  source=$(readlink $SRC_DIR$subpath)\n  sourcetype=$(stat -f \"%HT%SY\" $source)\n  if [ \"$sourcetype\" = \"Directory\" ]; then\n    mkdir \"$DST_DIR$subpath\" || exit 2\n  else\n    rsync -a \"$source\" \"$DST_DIR$subpath\" || exit 3\n  fi\ndone\n\n# Files\nfor p in $(do_find -type f -print); do\n  subpath=\"${p#$SRC_DIR}\"\n  if ! ln \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\" 2>/dev/null; then\n    rsync -a \"$SRC_DIR$subpath\" \"$DST_DIR$subpath\" || exit 4\n  fi\ndone\n\n)\nIFS=$ORIG_IFS";
-			showEnvVarsInLog = 0;
-		};
-		C0C685BE18C497BF003E5CCC /* Copy www directory */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -559,16 +428,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0C685D118C497BF003E5CCC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0C685D218C497BF003E5CCC /* main.m in Sources */,
-				C0C685D318C497BF003E5CCC /* AppDelegate.m in Sources */,
-				C0C685D418C497BF003E5CCC /* MainViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -576,11 +435,6 @@
 			isa = PBXTargetDependency;
 			name = CordovaLib;
 			targetProxy = 301BF550109A68C00062928A /* PBXContainerItemProxy */;
-		};
-		C0C685BC18C497BF003E5CCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CordovaLib;
-			targetProxy = C0C685BD18C497BF003E5CCC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -777,70 +631,6 @@
 			};
 			name = Release;
 		};
-		C0C685E918C497BF003E5CCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$F5 - Tuffnut/$F5 - Tuffnut-Prefix.pch";
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "SmartShop copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = (
-					"-weak_framework",
-					CoreFoundation,
-					"-weak_framework",
-					UIKit,
-					"-weak_framework",
-					AVFoundation,
-					"-weak_framework",
-					CoreMedia,
-					"-weak-lSystem",
-					"-force_load",
-					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "SmartShop copy";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C0C685EA18C497BF003E5CCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$F5 - Tuffnut/$F5 - Tuffnut-Prefix.pch";
-				GCC_THUMB_SUPPORT = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "SmartShop copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = (
-					"-weak_framework",
-					CoreFoundation,
-					"-weak_framework",
-					UIKit,
-					"-weak_framework",
-					AVFoundation,
-					"-weak_framework",
-					CoreMedia,
-					"-weak-lSystem",
-					"-force_load",
-					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "SmartShop copy";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -858,15 +648,6 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C0C685E818C497BF003E5CCC /* Build configuration list for PBXNativeTarget "SmartShop copy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C0C685E918C497BF003E5CCC /* Debug */,
-				C0C685EA18C497BF003E5CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
