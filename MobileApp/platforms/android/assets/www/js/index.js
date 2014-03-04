@@ -18,7 +18,7 @@
  */
 var app = {
 
-    HOST_URL : "http://41760a89.ngrok.com/products/",
+    HOST_URL : "http://tuffnut.ngrok.com/products/",
     type: 'barcode',
 
     // Application Constructor
@@ -164,8 +164,9 @@ var app = {
 
     scan: function(options) {
         console.log('scanning');
+        var scanner = cordova.require("com.phonegap.plugins.barcodescanner.BarcodeScanner");
 
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+       // var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) {
 
